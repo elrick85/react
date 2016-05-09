@@ -1,0 +1,49 @@
+{
+  "name": "generator-react-bootstrap-typescript-webpack",
+  "version": "1.0.0",
+  "description": "Yeoman generator for a front-end app built with bootstrap, reactjs, typescript and bundled with webpack.",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lee Man",
+  "license": "ISC",
+  "keywords": [
+      "yeoman-generator",
+      "typescript",
+      "webpack",
+      "react",
+      "bootstrap",
+      "i18n",
+      "internationalization",
+      "nanoflux",
+      "flux",
+      "react-router"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.1",
+    "i18next": "^2.5.1",
+    "jquery": "^2.2.3",
+    "nanoflux": "^1.0.7",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-router": "^2.4.0"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^0.17.0",
+    "bootstrap-webpack": "0.0.5",
+    "css-loader": "^0.23.1",
+    "exports-loader": "^0.6.3",
+    "expose-loader": "^0.7.1",
+    "file-loader": "^0.8.5",
+    "imports-loader": "^0.6.5",
+    "less": "^2.7.0",
+    "less-loader": "^2.2.3",
+    "path": "^0.12.7",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.2",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.0"
+  }
+}
