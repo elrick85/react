@@ -1,4 +1,4 @@
-# generator-react-bootstrap-typescript-webpack
+# Front-end Starter Kit - based on react, typescript and webpack
 Yeoman generator for a front-end app built with bootstrap, react, typescript and bundled with webpack
 
 This project can serve as a starting point for a front-end application powered by
