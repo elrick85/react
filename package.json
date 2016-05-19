@@ -6,8 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Lee Man",
+  "author": {
+    "name": "Lee Man",
+    "email": "leeman2016@gmail.com",
+    "website": "https://github.com/lgirma",
+  },
   "license": "ISC",
+  "homepage": "https://github.com/lgirma/generator-react-bootstrap-typescript-webpack#readme",
   "keywords": [
       "yeoman-generator",
       "typescript",
