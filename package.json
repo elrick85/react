@@ -9,8 +9,12 @@
   "author": {
     "name": "Lee Man",
     "email": "leeman2016@gmail.com",
-    "website": "https://github.com/lgirma",
+    "website": "https://github.com/lgirma"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lgirma/generator-react-bootstrap-typescript-webpack"
+  }
   "license": "ISC",
   "homepage": "https://github.com/lgirma/generator-react-bootstrap-typescript-webpack#readme",
   "keywords": [
