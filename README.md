@@ -19,13 +19,13 @@ To get started with the application, you will need to install required compilers
 Linux
 
 ```
-sudo npm install typescript
+sudo npm install -g typescript
 ```
 
 Other OS's
 
 ```
-npm install typescript
+npm install -g typescript
 ```
 
 ### 2. Install webpack:
@@ -33,13 +33,13 @@ npm install typescript
 Linux
 
 ```
-sudo npm install webpack
+sudo npm install -g webpack
 ```
 
 Other OS's
 
 ```
-npm install webpack
+npm install -g webpack
 ```
 
 ### 3. Install dependencies
