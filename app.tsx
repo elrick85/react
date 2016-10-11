@@ -1,12 +1,9 @@
 // import * as $ from 'jquery';
-import NanoFlux = require('./bundle/nanoflux');
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import * as Bootstrap from 'bootstrap';
-import * as i18next from 'i18next';
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
-
-import { Login } from './components/pages/Login';
+import { Login } from './components/pages/Login/Login';
 import { PageNotFound } from './components/pages/PageNotFound';
 import { localeStore } from './stores/LocaleStore';
 
@@ -30,8 +27,6 @@ export class App extends React.Component<{}, {}>{
     }
 };
 
-window['i18next'] = i18next;
-window['ReactDOM'] = ReactDOM;
-window['React'] = React;
 window['App'] = App;
-window['NanoFlux'] = NanoFlux;
+
+ReactDOM.render(React.createElement(App), document.getElementById('body-container'));

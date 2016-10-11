@@ -18,19 +18,20 @@
   "license": "ISC",
   "homepage": "https://github.com/lgirma/generator-react-bootstrap-typescript-webpack#readme",
   "keywords": [
-      "yeoman-generator",
-      "typescript",
-      "webpack",
-      "react",
-      "bootstrap",
-      "i18n",
-      "internationalization",
-      "nanoflux",
-      "flux",
-      "react-router"
+    "yeoman-generator",
+    "typescript",
+    "webpack",
+    "react",
+    "bootstrap",
+    "i18n",
+    "internationalization",
+    "nanoflux",
+    "flux",
+    "react-router"
   ],
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "flux": "^3.0.0",
     "font-awesome": "^4.6.1",
     "i18next": "^2.5.1",
     "jquery": "^2.2.3",
@@ -40,6 +41,8 @@
     "react-router": "^2.4.0"
   },
   "devDependencies": {
+    "html-webpack-plugin": "*",
+    "extract-text-webpack-plugin": "*",
     "awesome-typescript-loader": "^0.17.0",
     "bootstrap-webpack": "0.0.5",
     "css-loader": "^0.23.1",

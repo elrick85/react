@@ -10,6 +10,12 @@ export class LocaleStoreClass {
         i18next.changeLanguage(lang)
         this.notify()
     }
+
+    onAuthUser = function(data){
+        console.log("User auth");
+        this.notify();
+    }
+
     notify(args?: any) {}
     
 }
