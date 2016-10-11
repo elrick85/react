@@ -8,10 +8,10 @@ export class LangChoice extends React.Component<{}, {}> {
     _subscription = null
     onValChanged(val) { this.forceUpdate() }
     componentDidMount() {
-        this._subscription = localeStore.subscribe(this, this.onValChanged)
+        this._subscription = localeStore.addListener(this.onValChanged.bind(this));
     }
     componentWillUnmount() {
-        this._subscription.unsubscribe(this, this.onValChanged)
+        //this._subscription.unsubscribe(this, this.onValChanged)
     }
     onChoiceChange(e) {
         appActions.setLanguage(e.target.value)

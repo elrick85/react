@@ -1,10 +1,10 @@
-import NanoFlux = require('../bundle/nanoflux')
+import * as Flux from 'flux'; 
 
-import {dispatcher} from '../stores/Dispatcher'
+import {dispatcher, IAction} from '../stores/Dispatcher'
 
 export class AppActions {
     setLanguage = function(lang) { 
-        this.dispatch('setLanguage', lang) 
+        dispatcher.handleLangAction(lang);
     }
 
     validUser = function(data){
@@ -17,9 +17,10 @@ export class AppActions {
 
     authUser = function(data){
         if(this.validUser(data)){
-            this.dispatch('authUser', data);
+            dispatcher.handleAuthAction(data);
         }
     }
 }
-NanoFlux.createActions('appActions', dispatcher, new AppActions())                
-export var appActions: AppActions = NanoFlux.getActions('appActions')
+
+//Flux.createActions('appActions', dispatcher, new AppActions())                
+export var appActions: AppActions = new AppActions();

@@ -9,18 +9,21 @@ import { localeStore } from './stores/LocaleStore';
 
 export class App extends React.Component<{}, {}>{
     _subscription = null
-    onValChanged(val) { this.forceUpdate() }
+
+    onValChanged(val) {
+        this.forceUpdate()
+    }
     componentDidMount() {
-        this._subscription = localeStore.subscribe(this, this.onValChanged)
+        this._subscription = localeStore.addListener(this.onValChanged.bind(this));
     }
     componentWillUnmount() {
-        this._subscription.unsubscribe(this, this.onValChanged)
+        //this._subscription.unsubscribe(this, this.onValChanged)
     }
     render() {
         return (
             <Router history={hashHistory}>
-                <Route path="/" component={Login}/>                
-                <Route path="/login/:name" component={Login}/>
+                <Route path="/" component={Login} />
+                <Route path="/login/:name" component={Login} />
                 <Route path="*" component={PageNotFound} />
             </Router>
         );

@@ -1,3 +1,18 @@
-import NanoFlux = require('../bundle/nanoflux')
+import * as Flux from 'flux';
 
-export var dispatcher = NanoFlux.createDispatcher('infDispatcher');
+export interface IAction {
+    type: string;
+    data: any;
+}
+
+class AppDispatcher extends Flux.Dispatcher<IAction>{
+    handleLangAction(data: any) {
+        this.dispatch({ type: "SET_LANGUAGE", data: data });
+    }
+
+    handleAuthAction(data: any) {
+        this.dispatch({ type: "AUTH_USER", data: data });
+    }
+}
+
+export var dispatcher = new AppDispatcher();
