@@ -1,6 +1,4 @@
-import React = require('react');
-import i18next = require('i18next');
-
+import * as React from 'react';
 import {NavBar} from '../common/NavBar';
 import {NavBottom} from '../common/NavBottom';
 

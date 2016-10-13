@@ -2,7 +2,22 @@ import * as Flux from 'flux';
 
 export interface IAction {
     type: string;
-    data: any;
+    data: string;
+}
+
+export interface IState {
+    lang: string;
+}
+
+export class State implements IState{
+    public lang: string;
+
+    static createForLang(lang?: string){
+        var _s:IState = new State();
+        _s.lang = lang || "eng";
+
+        return _s;
+    }
 }
 
 class AppDispatcher extends Flux.Dispatcher<IAction>{

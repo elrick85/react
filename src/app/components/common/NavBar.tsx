@@ -1,9 +1,8 @@
 import * as React from 'react';
-import * as i18next from 'i18next';
-
+import {CommonComponent} from './CommonComponent';
 import {LangChoice} from './LangChoice'
 
-export class NavBar extends React.Component<{}, {}> {
+export class NavBar extends CommonComponent<{}, {}> {
     render() {
         return <nav className="navbar navbar-default navbar-static-top">
             <div className="container-fluid">
@@ -19,13 +18,13 @@ export class NavBar extends React.Component<{}, {}> {
                 </div>
                 <div className="collapse navbar-collapse" id="main-navbar">
                     <ul className="nav navbar-nav">
-                        <li><a href="#">{i18next.t('TOURS')}</a></li>
-                        <li><a href="#">{i18next.t('GROUPS')}</a></li>
+                        <li><a href="#">{this.i18next.t('TOURS')}</a></li>
+                        <li><a href="#">{this.i18next.t('GROUPS')}</a></li>
                     </ul>
                     <div id="nav-right">
                         <ul className="nav navbar-nav navbar-right">
                             <LangChoice />
-                            <li><a href="#">{i18next.t('SIGN_IN')}</a></li>
+                            <li><a href="#">{this.i18next.t('SIGN_IN')}</a></li>
                         </ul>
                     </div>
                 </div>

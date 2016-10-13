@@ -4,7 +4,9 @@
   "description": "Yeoman generator for a front-end app built with bootstrap, reactjs, typescript and bundled with webpack.",
   "main": "bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --inline --progress --port 8080",
+    "postinstall": "typings install"
   },
   "author": {
     "name": "Lee Man",

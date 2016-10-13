@@ -1,6 +1,6 @@
 import * as i18next from 'i18next';
 
-i18next.init({
+var newi18n = i18next.init({
     lng: 'en',
     resources: {
         en: {
@@ -57,4 +57,6 @@ i18next.init({
 },
 function(err, t) {
     
-})
+});
+
+export var i18n:I18next.I18n = newi18n;

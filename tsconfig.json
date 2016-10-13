@@ -10,7 +10,7 @@
         "node_modules"
     ]
     /*"files": [
-        "app.tsx",        
+        "src.tsx",
         "./components/Pages/NavBar.tsx",
         "typings/tsd.d.ts"
     ]*/

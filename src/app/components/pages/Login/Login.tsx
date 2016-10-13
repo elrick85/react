@@ -1,6 +1,5 @@
 import * as React from 'react';
-import * as i18next from 'i18next';
-
+import {CommonComponent} from '../../common/CommonComponent';
 import { NavBar } from '../../common/NavBar';
 import { NavBottom } from '../../common/NavBottom';
 import { appActions } from '../../../actions/SystemActions'
@@ -8,12 +7,29 @@ import { appActions } from '../../../actions/SystemActions'
 import {ILoginState} from './ILoginState';
 import {LoginStateModel} from './LoginStateModel';
 
-export class Login extends React.Component<{}, ILoginState> {
-    _subscription = null
+interface ILoginParams{
+    name: string;
+}
 
-    constructor() {
-        super();
+interface ILoginProps {
+    params: ILoginParams
+}
+
+export class Login extends CommonComponent<ILoginProps, ILoginState> {
+    _subscription = null;
+
+    constructor(props: ILoginProps) {
+        super(props);
         this.state = new LoginStateModel();
+
+    }
+
+    componentDidMount() {
+        this.setState({
+            // route components are rendered with useful information, like URL params
+            name: this.props.params.name,
+            pass: ''
+        })
     }
 
     handleNameChange(e) {
@@ -41,25 +57,25 @@ export class Login extends React.Component<{}, ILoginState> {
                     </div>
                     <div className="col-md-6">
                         <div className="panel panel-default">
-                            <div className="panel-heading">{i18next.t('LOGIN')}</div>
+                            <div className="panel-heading">{this.i18next.t('LOGIN')}: {this.props.params.name}</div>
                             <div className="panel-body">
                                 <form onSubmit={this.handleSubmit.bind(this)}>
                                     <div className="form-group">
-                                        <label className="control-label1">{i18next.t('USER_NAME')}</label>
+                                        <label className="control-label1">{this.i18next.t('USER_NAME')}</label>
                                         <input
                                             value={this.state.name}
                                             onChange={this.handleNameChange.bind(this)}
                                             required type="text" name="userName" id="userName" className="form-control"></input>
                                     </div>
                                     <div className="form-group">
-                                        <label className="control-label">{i18next.t('PASSWORD')}</label>
+                                        <label className="control-label">{this.i18next.t('PASSWORD')}</label>
                                         <input type="password"
                                             value={this.state.pass}
                                             onChange={this.handlePassChange.bind(this)}
                                             name="password" id="password" className="form-control"></input>
                                     </div>
                                     <div className="pull-right">
-                                        <button type="submit" className="btn btn-success"><i className="fa fa-sign-in"></i> {i18next.t('LOGIN')}</button>
+                                        <button type="submit" className="btn btn-success"><i className="fa fa-sign-in"></i> {this.i18next.t('LOGIN')}</button>
                                     </div>
                                 </form>
 
