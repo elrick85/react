@@ -10,8 +10,7 @@ module.exports = {
         app: './src/main.ts'
     },
     output: {
-        path: helpers.root('build'),
-        publicPath: 'http://localhost:8080/',
+        path: helpers.root('public'),
         filename: 'bundle/[name].js',
         chunkFilename: 'bundle/[id].chunk.js'
     },
